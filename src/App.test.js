@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
 
-test('renders learn react link', () => {
+import { App } from "./App";
+
+test("Renders main heading", async () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const mainHeadingElement = screen.getByText(/class components/i);
+
+  expect(mainHeadingElement).toBeInTheDocument();
 });

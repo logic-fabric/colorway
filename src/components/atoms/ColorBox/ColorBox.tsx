@@ -1,5 +1,4 @@
 import React from "react";
-
 import styled from "styled-components";
 
 export const DEFAULT_COLOR = "lightgrey";
@@ -36,6 +35,9 @@ const ColorBoxContainer = styled.p<ColorBoxProps>`
   width: ${(props) => props.size};
   height: ${(props) => props.size};
   border-radius: ${(props) => (props.isRounded ? "50%" : "0")};
+
+  font-size: 1.15rem;
+  font-weight: 500;
 
   background: ${(props) => props.color};
 `;

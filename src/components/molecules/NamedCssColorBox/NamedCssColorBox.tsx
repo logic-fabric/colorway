@@ -1,9 +1,7 @@
 import React from "react";
-
 import styled from "styled-components";
 
 import { ColorBox } from "../../atoms/ColorBox/ColorBox.tsx";
-
 import { convertNamedColorToHexaCode } from "../../../utils/colors/colorConverters.ts";
 
 export const DEFAULT_COLOR = "lightgrey";

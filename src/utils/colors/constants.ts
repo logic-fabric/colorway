@@ -58,7 +58,6 @@ export const NAMED_CSS_COLORS: colorDictionary = {
   gray: "#808080",
   green: "#008000",
   greenyellow: "#adff2f",
-  gray: "#808080",
   grey: "#808080",
   honeydew: "#f0fff0",
   hotpink: "#ff69b4",

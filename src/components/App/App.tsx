@@ -1,15 +1,14 @@
 import React from "react";
 
-import { NamedCssColorBox } from "../molecules/NamedCssColorBox/NamedCssColorBox.tsx";
+import { NamedCssColorsPalette } from "../organisms/NamedCssColorsPalette/NamedCssColorsPalette.tsx";
 
 export function App() {
   return (
     <main>
       <h1>Colorway</h1>
 
-      <NamedCssColorBox />
-      <NamedCssColorBox colorName="lightgoldenrodyellow" isRounded={true} />
-      <NamedCssColorBox colorName="lightgreen" size="5rem" />
+      <h2>Named CSS colors</h2>
+      <NamedCssColorsPalette />
     </main>
   );
 }

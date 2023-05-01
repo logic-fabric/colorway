@@ -1,4 +1,6 @@
-export function convertHexaToRGBCode(colorCode: string): string {
+import { NAMED_CSS_COLORS } from "./constants";
+
+export function convertHexaToRgbCode(colorCode: string): string {
   if (colorCode.length === 4) {
     colorCode = convertTo6DigitsHexaCode(colorCode);
   }
@@ -7,11 +9,15 @@ export function convertHexaToRGBCode(colorCode: string): string {
   const hexaGreen = colorCode.slice(3, 5);
   const hexaBlue = colorCode.slice(5);
 
-  const RGBRed = parseInt(hexaRed, 16);
-  const RGBGreen = parseInt(hexaGreen, 16);
-  const RGBBlue = parseInt(hexaBlue, 16);
+  const rgbRed = parseInt(hexaRed, 16);
+  const rgbGreen = parseInt(hexaGreen, 16);
+  const rgbBlue = parseInt(hexaBlue, 16);
 
-  return `rgb(${RGBRed}, ${RGBGreen}, ${RGBBlue})`;
+  return `rgb(${rgbRed}, ${rgbGreen}, ${rgbBlue})`;
+}
+
+export function convertNamedColorToHexaCode(color: string): string {
+  return NAMED_CSS_COLORS[color.toLowerCase()];
 }
 
 export function convertTo6DigitsHexaCode(colorCode: string): string {

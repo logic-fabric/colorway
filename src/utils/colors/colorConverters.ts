@@ -1,4 +1,4 @@
-import { NAMED_CSS_COLORS } from "./constants";
+import { NAMED_CSS_COLORS } from "./constants.ts";
 
 export function convertHexaToRgbCode(colorCode: string): string {
   if (colorCode.length === 4) {

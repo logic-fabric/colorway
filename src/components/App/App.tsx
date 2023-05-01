@@ -1,15 +1,15 @@
 import React from "react";
 
-import { ColorBox } from "../atoms/ColorBox/ColorBox.tsx";
+import { NamedCssColorBox } from "../molecules/NamedCssColorBox/NamedCssColorBox.tsx";
 
 export function App() {
   return (
     <main>
       <h1>Colorway</h1>
 
-      <ColorBox />
-      <ColorBox color="lightblue" isRounded={true} />
-      <ColorBox color="lightgreen" size="8rem" />
+      <NamedCssColorBox />
+      <NamedCssColorBox colorName="lightgoldenrodyellow" isRounded={true} />
+      <NamedCssColorBox colorName="lightgreen" size="5rem" />
     </main>
   );
 }

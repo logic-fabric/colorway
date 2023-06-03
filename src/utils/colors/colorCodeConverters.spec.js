@@ -1,4 +1,5 @@
 import {
+  convertHexaToHslCode,
   convertHexaToRgbCode,
   convertNamedColorToHexaCode,
   convertTo6DigitsHexaCode,
@@ -25,6 +26,13 @@ const HEXA_6_DIGITS_TO_RGB = {
   "#00cc33": "rgb(0, 204, 51)",
 };
 
+const HEXA_6_DIGITS_TO_HSL = {
+  "#000000": "hsl(0, 0%, 0%)",
+  "#ffffff": "hsl(0, 0%, 100%)",
+  "#ffcc99": "hsl(30, 100%, 80%)",
+  "#00cc33": "hsl(135, 100%, 40%)",
+};
+
 const NAMED_COLORS_TO_HEXA = {
   black: "#000000",
   Blue: "#0000ff",
@@ -48,7 +56,7 @@ describe("GIVEN a 3 digits hexadecimal color code", () => {
     });
   });
 
-  describe("WHEN using convertHexaToRGBCode()", () => {
+  describe("WHEN using convertHexaToRgbCode()", () => {
     test("THEN it can be converted as a RGB color code", () => {
       for (let color in HEXA_3_DIGITS_TO_RGB) {
         expect(convertHexaToRgbCode(color)).toBe(HEXA_3_DIGITS_TO_RGB[color]);
@@ -58,7 +66,15 @@ describe("GIVEN a 3 digits hexadecimal color code", () => {
 });
 
 describe("GIVEN a 6 digits hexadecimal color code", () => {
-  describe("WHEN using convertHexaToRGBCode()", () => {
+  describe("WHEN using convertHexaToHslCode()", () => {
+    test("THEN it can be converted as a HSL color code", () => {
+      for (let color in HEXA_6_DIGITS_TO_HSL) {
+        expect(convertHexaToHslCode(color)).toBe(HEXA_6_DIGITS_TO_HSL[color]);
+      }
+    });
+  });
+
+  describe("WHEN using convertHexaToRgbCode()", () => {
     test("THEN it can be converted as a RGB color code", () => {
       for (let color in HEXA_6_DIGITS_TO_RGB) {
         expect(convertHexaToRgbCode(color)).toBe(HEXA_6_DIGITS_TO_RGB[color]);

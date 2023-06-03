@@ -2,7 +2,7 @@ import {
   convertHexaToRgbCode,
   convertNamedColorToHexaCode,
   convertTo6DigitsHexaCode,
-} from "./colorConverters";
+} from "./colorCodeConverters";
 
 const HEXA_3_DIGITS_TO_HEXA_6_DIGITS = {
   "#000": "#000000",

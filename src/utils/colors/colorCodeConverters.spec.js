@@ -12,6 +12,13 @@ const HEXA_3_DIGITS_TO_HEXA_6_DIGITS = {
   "#0c3": "#00cc33",
 };
 
+const HEXA_6_DIGITS_TO_HSL = {
+  "#000000": "hsl(0, 0%, 0%)",
+  "#ffffff": "hsl(0, 0%, 100%)",
+  "#ffcc99": "hsl(30, 100%, 80%)",
+  "#00cc33": "hsl(135, 100%, 40%)",
+};
+
 const HEXA_3_DIGITS_TO_RGB = {
   "#000": "rgb(0, 0, 0)",
   "#fff": "rgb(255, 255, 255)",
@@ -24,13 +31,6 @@ const HEXA_6_DIGITS_TO_RGB = {
   "#ffffff": "rgb(255, 255, 255)",
   "#ffcc99": "rgb(255, 204, 153)",
   "#00cc33": "rgb(0, 204, 51)",
-};
-
-const HEXA_6_DIGITS_TO_HSL = {
-  "#000000": "hsl(0, 0%, 0%)",
-  "#ffffff": "hsl(0, 0%, 100%)",
-  "#ffcc99": "hsl(30, 100%, 80%)",
-  "#00cc33": "hsl(135, 100%, 40%)",
 };
 
 const NAMED_COLORS_TO_HEXA = {
